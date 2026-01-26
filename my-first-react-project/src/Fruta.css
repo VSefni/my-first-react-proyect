@@ -1,0 +1,7 @@
+.fruta-card {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: fit-content;
+    justify-content: space-between;
+}
