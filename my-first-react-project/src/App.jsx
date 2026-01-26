@@ -1,5 +1,6 @@
 import './App.css'
 import CatalogoFrutas from "./CatalogoFrutas.jsx";
+import {useState} from "react";
 
 function App() {
     const frutas = [
@@ -9,13 +10,29 @@ function App() {
         { emoji:"🍌", nombre:"Plátanos", origen:"chile",vitamina:"C", color:"Rojo", id:4 },
         { emoji:"🍊", nombre:"Mandarina", origen:"chile",vitamina:"C", color:"Rojo", id:5 }
     ]
+
+    const [numero, setNumero] = useState(0);
+
+    const siguiente = () => {
+        if (numero === frutas.length-1) {
+            setNumero(0)
+        } else {
+            setNumero(numero + 1);
+        }
+    }
+    const anterior = () => {
+        if (numero === 0) {
+            setNumero(frutas.length-1)
+        } else {
+            setNumero(numero - 1);
+        }
+    }
+
     return (
         <div className="App">
-            <CatalogoFrutas fruta={frutas[0]}/>
-            <CatalogoFrutas fruta={frutas[1]}/>
-            <CatalogoFrutas fruta={frutas[2]}/>
-            <CatalogoFrutas fruta={frutas[3]}/>
-            <CatalogoFrutas fruta={frutas[4]}/>
+            <CatalogoFrutas fruta={frutas[numero]}/>
+            <button onClick={anterior}>Anterior</button>
+            <button onClick={siguiente}>Siguiente</button>
         </div>
     )
 }

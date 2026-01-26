@@ -6,9 +6,7 @@ function CatalogoFrutas({fruta}) {
         <div className="catalogoFrutas">
             <div className="fruta-card">
                 <div className="fruta-emoji">{fruta.emoji}</div>
-                <h2 onClick={()=>{
-                    console.log("h2")
-                }} className="fruta-nombre">{fruta.nombre}</h2>
+                <h2 className="fruta-nombre">{fruta.nombre}</h2>
                 <div className="fruta-info">
                     <p><strong>Color:</strong> {fruta.color}</p>
                     <p><strong>Origen:</strong> {fruta.origen}</p>
