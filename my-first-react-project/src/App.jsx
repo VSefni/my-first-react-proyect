@@ -31,8 +31,10 @@ function App() {
     return (
         <div className="App">
             <CatalogoFrutas fruta={frutas[numero]}/>
-            <button onClick={anterior}>Anterior</button>
-            <button onClick={siguiente}>Siguiente</button>
+            <div className="botones">
+                <button onClick={anterior} className="boton">Anterior</button>
+                <button onClick={siguiente} className="boton">Siguiente</button>
+            </div>
         </div>
     )
 }

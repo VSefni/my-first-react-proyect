@@ -3,3 +3,23 @@
   padding: 0;
   text-align: center;
 }
+
+.botones {
+  display: flex;
+  justify-content: space-around;
+}
+
+.boton {
+  width: 20%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #15803d;
+}
