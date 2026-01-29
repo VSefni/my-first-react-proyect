@@ -14,21 +14,19 @@ function App() {
     const [numero, setNumero] = useState(0);
 
     const siguiente = () => {
-        const btnsig = document.getElementById("btnsig");
-        numero === frutas.length-1 ? btnsig.disabled = true : setNumero(numero + 1);
+            setNumero(numero + 1);
     }
 
     const anterior = () => {
-        const btnprev = document.getElementById("btnprev");
-        numero === 0 ? btnprev.disabled = true : setNumero(numero - 1);
+            setNumero(numero - 1);
     }
 
     return (
         <div className="App">
             <CatalogoFrutas fruta={frutas[numero]}/>
             <div className="botones">
-                <button onClick={anterior} className="boton" id="prev">Anterior</button>
-                <button onClick={siguiente} className="boton" id="sig">Siguiente</button>
+                <button onClick={anterior} className="boton" id="btnprev" disabled={numero === 0}>Anterior</button>
+                <button onClick={siguiente} className="boton" id="btnsig" disabled={numero === frutas.length - 1}>Siguiente</button>
             </div>
         </div>
     )
