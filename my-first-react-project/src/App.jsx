@@ -6,8 +6,8 @@ function App() {
     const frutas = [
         { emoji:"🍎", nombre:"Manzana", origen:"Chile",vitamina:"C", color:"Rojo", id:1 },
         { emoji:"🥝", nombre:"Kiwi", origen:"Nueva Zelanda",vitamina:"C", color:"Verde", id:2 },
-        { emoji:"🫐", nombre:"Arándanos", origen:"España",vitamina:"K", color:"Azul", id:3 },
-        { emoji:"🍌", nombre:"Plátanos", origen:"Malasia",vitamina:"B6", color:"Amarillo", id:4 },
+        { emoji:"🫐", nombre:"Arándano azul", origen:"España",vitamina:"K", color:"Azul", id:3 },
+        { emoji:"🍌", nombre:"Plátano", origen:"Malasia",vitamina:"B6", color:"Amarillo", id:4 },
         { emoji:"🍊", nombre:"Mandarina", origen:"China",vitamina:"C", color:"Naranja", id:5 }
     ];
 

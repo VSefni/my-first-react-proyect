@@ -12,7 +12,13 @@ function CatalogoFrutas({fruta}) {
                     <p><strong>Origen:</strong> {fruta.origen}</p>
                     <p><strong>Vitamina:</strong> {fruta.vitamina}</p>
                 </div>
-                <button className="boton-detalle">Ver más</button>
+                <button className="boton-detalle" onClick={()=>{
+                    window.open(
+                        "https://es.wikipedia.org/wiki/" + fruta.nombre,
+                        "_blank",
+                        "noopener,noreferrer"
+                    )
+                }}>Ver más</button>
             </div>
         </div>
     );
